@@ -39,14 +39,18 @@ class _AgeWidgetState extends State<AgeWidget> {
           children: [
             Text(
               widget.title,
-              style: const TextStyle(fontSize: 20, color: Colors.grey),
+              style: const TextStyle(
+                fontSize: 20,
+                color: Color.fromARGB(255, 141, 25, 17),
+              ),
             ),
             const SizedBox(
               height: 15,
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(10.0),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   InkWell(
                     child: const CircleAvatar(
@@ -66,6 +70,9 @@ class _AgeWidgetState extends State<AgeWidget> {
                       widget.onChange(counter);
                     },
                   ),
+                  const SizedBox(
+                    width: 5,
+                  ),
                   Text(
                     counter.toString(),
                     textAlign: TextAlign.center,
@@ -76,7 +83,7 @@ class _AgeWidgetState extends State<AgeWidget> {
                     ),
                   ),
                   const SizedBox(
-                    width: 15,
+                    width: 5,
                   ),
                   InkWell(
                     child: const CircleAvatar(
